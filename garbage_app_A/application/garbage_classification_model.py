@@ -3,7 +3,7 @@ import numpy as np
 import os
 
 def load_model():
-    # Ensure the path points to the correct location inside the container
+    # Construct the correct model path
     model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'garbage_classification_model.keras')
 
     if not os.path.exists(model_path):
