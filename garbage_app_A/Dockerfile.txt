@@ -5,13 +5,7 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY . /app
-
-# Ensure the model is copied to the correct location
-COPY garbage_classification_model.keras /app/garbage_classification_model.keras
-
-# List files to verify the model file is copied correctly
-RUN ls -l /app
+COPY . .
 
 # Install dependencies from requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
