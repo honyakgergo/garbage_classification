@@ -17,4 +17,4 @@ EXPOSE 5000
 ENV FLASK_ENV=production
 
 # Run the application when the container starts
-CMD ["python", "run.py"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
