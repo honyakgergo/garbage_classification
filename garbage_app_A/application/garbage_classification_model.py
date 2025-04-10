@@ -13,7 +13,7 @@ def load_model():
     return model
 
 
-def classify_image(model, image):
+def predict_class(model, image):
     prediction = np.array([[random.uniform(0, 1) for i in range(6)]])
     predicted_class = np.argmax(prediction, axis=1)[0]
     print(prediction)
